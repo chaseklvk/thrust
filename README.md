@@ -75,3 +75,7 @@ Various references to learn more about probabilistic computing.
 ## Citation
 ---
 If you use this repository, please cite!
+
+## License
+---
+See the [LICENSE](https://github.com/chaseklvk/thrust/blob/main/LICENSE) file.
