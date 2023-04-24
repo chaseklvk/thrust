@@ -67,8 +67,9 @@ Running list of features to implement:
 
 ## References
 Various references to learn more about probabilistic computing.
-1) [p-Bits for Probabilistic Spin Logic](https://arxiv.org/pdf/1809.04028.pdf)
-2) [Massively Parallel Probabilistic Computing with Sparse Ising Machines](https://arxiv.org/pdf/2110.02481.pdf)
+1) [Thermodynamic AI and the fluctuation frontier](https://arxiv.org/pdf/2302.06584.pdf)
+2) [p-Bits for Probabilistic Spin Logic](https://arxiv.org/pdf/1809.04028.pdf)
+3) [Massively Parallel Probabilistic Computing with Sparse Ising Machines](https://arxiv.org/pdf/2110.02481.pdf)
 
 ## Citation
 If you use this repository, please cite!
