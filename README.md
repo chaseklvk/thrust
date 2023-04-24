@@ -10,8 +10,8 @@ ThRust is a Rust crate that provides a framework for thermodynamic and probabili
  
 `GridPbit`'s are used to construct a 2D lattice.
 
-		let p0 = GridPbit::new(0, 0);
-		let p1 = GridPbit::new(0, 1);
+	let p0 = GridPbit::new(0, 0);
+	let p1 = GridPbit::new(0, 1);
 
 This construction can be visualized in the following way:
 
@@ -19,7 +19,7 @@ This construction can be visualized in the following way:
 
 Pbits can then be used as inputs to probabilistic spin logic (PSL) gates:
 
-		let cp0 = Copy::new(p0, p1);
+	let cp0 = Copy::new(p0, p1);
 
 A set of PSL gates can be used to construct a p-circuit:
 
