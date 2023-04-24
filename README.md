@@ -7,7 +7,7 @@ ThRust is a Rust crate that provides a framework for thermodynamic and probabili
 * p-circuit simulation through Markov Chain Monte Carlo sampling.
 
 ## Tutorial
---- 
+ 
 `GridPbit`'s are used to construct a 2D lattice.
 
 		let p0 = GridPbit::new(0, 0);
@@ -57,7 +57,7 @@ ThRust also implements basic p-circuit composability. For example, here's an exa
 	sim.run();
 
 ## Future Additions
----
+
 Running list of features to implement:
 * Circuit compilation for disjoint circuits
 * More robust algorithm for circuit compilation
@@ -67,15 +67,15 @@ Running list of features to implement:
 * Compile high level code for FPGA hardware implementations
 
 ## References
----
+
 Various references to learn more about probabilistic computing.
 1) [p-Bits for Probabilistic Spin Logic](https://arxiv.org/pdf/1809.04028.pdf)
 2) [Massively Parallel Probabilistic Computing with Sparse Ising Machines](https://arxiv.org/pdf/2110.02481.pdf)
 
 ## Citation
----
+
 If you use this repository, please cite!
 
 ## License
----
+
 See the [LICENSE](https://github.com/chaseklvk/thrust/blob/main/LICENSE) file.
