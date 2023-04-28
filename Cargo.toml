@@ -8,6 +8,7 @@ homepage = "http://thrust-lang.org"
 repository = "https://github.com/chaseklvk/thrust"
 readme = "README.md"
 keywords = ["physics", "machine learning", "artificial intelligence", "thermodynamics", "probabilistic computing", "simulation"]
+exclude = ["docs"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
