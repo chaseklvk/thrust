@@ -6,6 +6,8 @@ ThRust is a Rust crate that provides a framework for thermodynamic and probabili
 * Basic p-circuit compilation and composability.
 * p-circuit simulation through Markov Chain Monte Carlo sampling.
 
+**Note: This repository is in early development, there could be frequent breaking changes until the first stable release.**
+
 ## Installation
 To install this crate, run the following command:
 ```
