@@ -2,6 +2,12 @@
 name = "thrust"
 version = "0.1.0"
 edition = "2021"
+license-file = "LICENSE"
+description = "ThRust is a software framework for thermodynamic and probabilistic computing."
+homepage = "http://thrust-lang.org"
+repository = "https://github.com/chaseklvk/thrust"
+readme = "README.md"
+keywords = ["physics", "machine learning", "artificial intelligence", "thermodynamics", "probabilistic computing", "simulation"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
