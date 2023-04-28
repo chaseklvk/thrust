@@ -6,12 +6,19 @@ ThRust is a Rust crate that provides a framework for thermodynamic and probabili
 * Basic p-circuit compilation and composability.
 * p-circuit simulation through Markov Chain Monte Carlo sampling.
 
+## Installation
+To install this crate, run the following command:
+```
+	cargo add th-rust
+```
+
 ## Tutorial
  
 `GridPbit`'s are used to construct a 2D lattice.
-
+```rust
 	let p0 = GridPbit::new(0, 0);
 	let p1 = GridPbit::new(0, 1);
+```
 
 This construction can be visualized in the following way:
 
@@ -19,29 +26,38 @@ This construction can be visualized in the following way:
 
 Pbits can then be used as inputs to probabilistic spin logic (PSL) gates:
 
+```rust
 	let cp0 = Copy::new(p0, p1);
+```
 
 A set of PSL gates can be used to construct a p-circuit:
 
+```rust
 	let circuit = Circuit::new();
 	circuit.append(Box::new(cp0));
 	circuit.compile();
+```
 
 Alternatively, circuits can be created from a vector of PSL gates:
 
+```rust
 	let circuit = Circuit::from_vector(vec![Box::new(cp0)]);
 	circuit.compile();
+```
 
 Finally, create a new simulator to find the ground state configurations via Markov chain Monte Carlo
 
+```rust
 	let mut sim = MCMC::new(circuit);
 	sim.run();
+```
 
 ### Composability
 ThRust also implements basic p-circuit composability. For example, here's an example of a two-gate p-circuit:
 
 ![](./docs/images/gridpbit2.png)
 
+```rust
 	let p1 = GridPbit::new(0, 0);
 	let p2 = GridPbit::new(0, 1);
 	let p3 = GridPbit::new(1, 0);
@@ -55,6 +71,7 @@ ThRust also implements basic p-circuit composability. For example, here's an exa
 
 	let mut sim = MCMC::new(circuit);
 	sim.run();
+```
 
 ## Future Additions
 Running list of features to implement:
