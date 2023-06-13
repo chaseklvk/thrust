@@ -31,7 +31,7 @@ impl Plotter {
 		.y_label_area_size(40)
 		.margin(5)
 		.caption("MCMC Sweep", ("sans-serif", 50.0))
-		.build_cartesian_2d((0u32..(self.buckets - 1) as u32).into_segmented(), 0u32..3000u32)?;
+		.build_cartesian_2d((0u32..(self.buckets + 1) as u32).into_segmented(), 0u32..3000u32)?;
 
 		chart
 			.configure_mesh()
@@ -66,7 +66,7 @@ impl Plotter {
 
 		for val in c.iter().rev() {
 			number += self.spin_to_bit(*val) * power;
-				power <<= 1;
+			power <<= 1;
 		}
 
 		number

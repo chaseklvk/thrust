@@ -56,7 +56,6 @@ impl MCMC {
 			// Collect some information about configuration energy
 			if sweep > self.config.warmup {
 				let _energy_sample = self.energy();
-	
 				plotter.add_sample(&self.activations);
 			}
 		}
@@ -72,10 +71,8 @@ impl MCMC {
 		let bias = self.circuit.bias.clone();
 
 		for j in 0..self.activations.len() {
-			if pbit_index != j {
-				// Update the synapse
-				synapse += weight[(pbit_index, j)] * self.activations[j];
-			}
+			// Update the synapse
+			synapse += weight[(pbit_index, j)] * self.activations[j];
 		}
 
 		synapse + bias[pbit_index]
@@ -86,6 +83,9 @@ impl MCMC {
 		let activation_dist = Uniform::new(-1.0, 1.0);
 
 		let mut raw_activ = (self.config.beta * synapse as f64).tanh();
+
+		println!("{:?}", raw_activ);
+
 		raw_activ -= rng.sample(activation_dist);
 
 		if raw_activ > 0.0 {

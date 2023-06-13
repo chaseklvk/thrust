@@ -6,7 +6,7 @@ pub mod circuit;
 
 #[cfg(test)]
 mod tests {
-    use gate::{Not, Or, And};
+    use gate::{Copy, Or, And};
     use pbit::GridPbit;
     use circuit::Circuit;
     use simulator::MCMC;
@@ -18,9 +18,10 @@ mod tests {
         let p0 = GridPbit::new(0, 0);
         let p1 = GridPbit::new(0, 1);
 
-        let cp0 = Not::new(p0, p1);
+        let cp0 = Copy::new(p0, p1);
 
-        let circuit = Circuit::from_vector(vec![Box::new(cp0)]);
+        let mut circuit = Circuit::from_vector(vec![Box::new(cp0)]);
+        circuit.compile();
 
         let mut sim = MCMC::new(circuit);
         sim.run();
@@ -34,7 +35,8 @@ mod tests {
 
         let and0 = And::new(p0, p1, p2);
 
-        let circuit = Circuit::from_vector(vec![Box::new(and0)]);
+        let mut circuit = Circuit::from_vector(vec![Box::new(and0)]);
+        circuit.compile();
 
         let mut sim = MCMC::new(circuit);
         sim.run();
@@ -48,7 +50,8 @@ mod tests {
 
         let and0 = Or::new(p0, p1, p2);
 
-        let circuit = Circuit::from_vector(vec![Box::new(and0)]);
+        let mut circuit = Circuit::from_vector(vec![Box::new(and0)]);
+        circuit.compile();
 
         let mut sim = MCMC::new(circuit);
         sim.run();
