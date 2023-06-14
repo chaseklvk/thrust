@@ -21,6 +21,9 @@ impl Plotter {
 	}
 
 	pub fn plot(&self, name: &str) -> Result<(), Box<dyn std::error::Error>> {
+		// Create output directory if it doesn't exist
+		std::fs::create_dir_all("out")?;
+
 		// Setup plot
 		let path = String::from("out/") + &name;
 		let root = BitMapBackend::new(&path, (1024, 768)).into_drawing_area();
