@@ -14,5 +14,8 @@ exclude = ["docs"]
 
 [dependencies]
 nalgebra = "0.32.2"
-plotters = "0.3.4"
+plotters = "^0.3.4"
 rand = "0.8.5"
+
+[patch.crates-io]
+plotters = { git = "https://github.com/plotters-rs/plotters.git" }
